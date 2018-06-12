@@ -10,7 +10,7 @@ import pages.MainPage;
 public class LoginAssertion extends MainPage {
 
     @FindBy(xpath ="//div/h2/span[text()='Zacznij w nowym uniwersum']" )
-    private WebElement menuButton;
+    private WebElement textInAccountPage;
     @FindBy(xpath = "//div[@class='usernameLoginformError parentFormloginForm formError']")
     private WebElement passwordErrorVisible;
     @FindBy(xpath = "//div[@class='formErrorContent']")
@@ -24,7 +24,7 @@ public class LoginAssertion extends MainPage {
 
     public void isUserLoggedIn(){
         waitForElement();
-        Assert.assertTrue(menuButton.isDisplayed());
+        Assert.assertTrue(textInAccountPage.isDisplayed());
     }
 
     public void userNotLoggedwithWrongPassword(){

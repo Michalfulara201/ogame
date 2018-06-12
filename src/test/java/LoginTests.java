@@ -8,19 +8,19 @@ public class LoginTests extends MainTest {
 
 
 
-    @Test(priority = 1)
+    @Test
 
    public void shouldLogIn(){
         indexPage.run(new LoginScenario("testtestest@gmail.com","123456789"))
                 .loginAssertion.isUserLoggedIn();
 
     }
-    @Test(priority = 2)
+    @Test
     public void shouldNotLogInWithWrongPassword(){
         indexPage.run(new LoginScenario("testtestest@gmail.com","1289"))
                 .loginAssertion.userNotLoggedwithWrongPassword();
     }
-    @Test(priority = 3)
+    @Test
     public void shouldNotLogInWithoutLogin(){
         indexPage.run(new LoginScenario("","123456789"))
                 .loginAssertion.userNotLoggedwithWrongLoggin();
