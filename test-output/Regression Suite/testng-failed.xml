@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Regression Suite]">
+  <parameter name="url" value="https://pl.ogame.gameforge.com/"/>
+  <test thread-count="5" name="AccountTests(failed)">
+    <classes>
+      <class name="RegistrationTests">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="shouldRegister"/>
+        </methods>
+      </class> <!-- RegistrationTests -->
+    </classes>
+  </test> <!-- AccountTests(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

@@ -59,15 +59,24 @@ public class IndexPage extends MainPage {
 
     }
 
-    public IndexPage closeJavaScript() {
-        javaScriptVisible.click();
-        return this;
+    public boolean isJavaScriptVisible() {
+        try {
+            if (javaScriptVisible.isEnabled()) {
+                javaScriptVisible.click();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            return false;
+        }
     }
+
 
     public IndexPage openOgamePage() {
         driver.get(url);
         waitForPageLoad();
-        javaScriptVisible.click();
+        isJavaScriptVisible();
         return this;
     }
 

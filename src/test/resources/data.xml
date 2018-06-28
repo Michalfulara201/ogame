@@ -7,11 +7,10 @@
 
     <test name="AccountTests">
         <classes>
-            <class name="LoginTests"/>
+            <!--class name="LoginTests"/-->
             <class name="RegistrationTests"/>
-            <!--class name="ForgotPasswordTests"/-->
-            <!--class name="TransferFundsTests"/-->
-            <!--class name="FindTransactionTests"/-->
+            <!--class name="ServerTests"/-->
+
 
         </classes>
     </test>
